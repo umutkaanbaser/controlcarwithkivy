@@ -46,4 +46,5 @@ then you will be asked this question and one of the following 2 pages will open 
  ```
  python main.py # apk yada exe haline getirilebilir, you can make apk or exe
  ```
- 
+ not: bu proje 09.2021 tarihinde geliştirilmiştir.
+ note : this project was developed on 09.2021 .
