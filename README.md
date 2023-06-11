@@ -2,3 +2,12 @@
 Python kivy kullanarak geliştirdiğimiz ara yüzde aynı ağda bulundunan ve içinde 'gorev_bilgisayari' klasöründe bulunan kod çalışan arabayı uzaktan kontrolunu sağladık. Bu kontrol için araba içindeki bilgisayarda bir flask server ve onu yönettiği bir sqlite veri tabanı kurduk. Telefonda çalışacak olan kontrol programında ise kivynin etiket sistemiyle  bir .kv dosyası oluşturarak ara yüz geliştirdik ardından ara yüzü python'a dahil ederek fonksiyonlarını yazdık. Ara yüzde araça ip adresi ile bağlanıp ondan görüntü aldık ve butonlar ile kontrolunu sağlıyoruz.
    
 In the interface we developed using python kivy, we provided remote control of the car, which is on the same network and running the code in the 'gorev_bilgisayari' folder. For this control, we set up a flask server on the computer in the car and an sqlite database that it manages. In the control program that will run on the phone, we developed an interface by creating a .kv file with kivy's tag system, then we included the interface in python and wrote its functions. In the interface, we connect to the vehicle with the ip address, get an image from it and control it with the buttons.
+
+# Kullanım | Usage
+not: unutulmamalıdır ki suan kamera görüntüsü 'webcam_Stream' klasöründe bulunun 'sunucu.py' dosyasından alınmaktadır. Kullanılacak araça ve kameraya göre o kod düzenlenmeli ve 'gorev_bilgisayari' klasorundeki 'sunucu.py' dosyasına eklenmelidir.
+
+note: it should be noted that the current camera image is taken from the 'server.py' file in the 'webcam_Stream' folder. According to the tool and camera to be used, that code should be edited and added to the 'server.py' file in the 'task_computer' folder.
+
+<div style="display:flex">
+   <img src="https://github.com/umutkaanbaser/controlcarwithkivy/blob/main/github_images/ekle1.png" style="width:50%;margin:auto;"/>
+</div>
