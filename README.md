@@ -25,6 +25,6 @@ Eğer Manuel'ı seçersiniz araçı kamera görüntüsü ile kullanabileceğiniz
 then you will be asked this question and one of the following 2 pages will open according to your answer. If you choose Autonomous, a page with a cancel button opens and tells the vehicle to drive autonomously.
 
  <div style="display:flex;width:100%;">
-   <img src="https://github.com/umutkaanbaser/controlcarwithkivy/blob/main/github_images/ekle3.png" width="200" style="width:50%;margin:auto;"/>
+   <img src="https://github.com/umutkaanbaser/controlcarwithkivy/blob/main/github_images/ekle3.png" width="200" heigth="100" style="width:50%;margin:auto;"/>
    <img src="https://github.com/umutkaanbaser/controlcarwithkivy/blob/main/github_images/ekle4.png" width="200" style="width:50%;margin:auto;"/>
 </div>
