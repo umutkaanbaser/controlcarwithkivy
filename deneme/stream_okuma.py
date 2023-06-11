@@ -5,7 +5,7 @@ import pickle
 import base64
 
 while True:
-    istek = requests.get("http://172.16.0.11:5000/video_feed")
+    istek = requests.get("http://127.0.01:5000/video_feed")
     txt = istek.text
     jpg_original = base64.b64decode(txt)
     filename = 'some_image.jpg'
