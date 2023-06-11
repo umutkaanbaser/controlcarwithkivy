@@ -8,6 +8,23 @@ not: unutulmamalıdır ki suan kamera görüntüsü 'webcam_Stream' klasöründe
 
 note: it should be noted that the current camera image is taken from the 'server.py' file in the 'webcam_Stream' folder. According to the tool and camera to be used, that code should be edited and added to the 'server.py' file in the 'task_computer' folder.
 
-<div style="display:flex">
+<div style="display:flex;width:100%;">
    <img src="https://github.com/umutkaanbaser/controlcarwithkivy/blob/main/github_images/ekle1.png" style="width:50%;margin:auto;"/>
+</div>
+ şeklinde açılış sayfası sizi karşılar, bu sayfa 3 saniye kadar şirket logosunu ve açıklamayı gösterip gidecektir.
+ 
+ The landing page will greet you, this page will show the company logo and description for about 3 seconds and go.
+ 
+ <div style="display:flex;width:100%;">
+   <img src="https://github.com/umutkaanbaser/controlcarwithkivy/blob/main/github_images/ekle2.png" style="width:50%;margin:auto;"/>
+</div>
+
+ardından size bu soru sorulur ve cevabınıza göre aşağıda ki 2 sayfadan birisi açılır. Otonom'u seçerseniz iptal butonu bulanan bir sayfa açlılır ve araça otonom gitmesini söyler.
+Eğer Manuel'ı seçersiniz araçı kamera görüntüsü ile kullanabileceğiniz ekran gelir ve araça bağlanmak için sizden ip adresi bekler.
+
+then you will be asked this question and one of the following 2 pages will open according to your answer. If you choose Autonomous, a page with a cancel button opens and tells the vehicle to drive autonomously.
+
+ <div style="display:flex;width:100%;">
+   <img src="https://github.com/umutkaanbaser/controlcarwithkivy/blob/main/github_images/ekle3.png" style="width:50%;margin:auto;"/>
+   <img src="https://github.com/umutkaanbaser/controlcarwithkivy/blob/main/github_images/ekle4.png" style="width:50%;margin:auto;"/>
 </div>
