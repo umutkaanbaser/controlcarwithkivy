@@ -1,5 +1,7 @@
 from flask import Flask, render_template, Response
 import cv2
+import base64
+import pickle
 
 app = Flask(__name__)
 camera = cv2.VideoCapture(0)
@@ -8,9 +10,7 @@ camera = cv2.VideoCapture(0)
 def index():
     return render_template('index.html')
 
-import base64
 
-import pickle
 @app.route('/video_feed')
 def video_feed():
     ret,frame = camera.read()
