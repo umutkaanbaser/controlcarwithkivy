@@ -7,13 +7,7 @@ cursor = con.cursor()
 
 app = Flask(__name__) 
 
-app.secret_key="Kıyafet Sayar"
-
-#stream yapma
-#video yayınlama
-#https://towardsdatascience.com/video-streaming-in-web-browsers-with-opencv-flask-93a38846fe00
-
-
+app.secret_key="otonom arac"
 
 @app.route("/")
 def index():
