@@ -1,0 +1,3 @@
+title=mobil
+author=yazar
+orientation=portrait

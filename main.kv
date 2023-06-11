@@ -1,0 +1,237 @@
+<pencere1>:
+	canvas:
+		Color:
+			rgba:self.bg_color
+		Rectangle:
+			pos:self.pos
+			size:self.size
+
+	id:pen_1
+	font_type:'fonts/Pacifico-Regular.ttf'
+
+	Image:
+		source:"img/logo.png"
+		allow_stretch: True
+		size_hint:0.8,0.8
+		pos_hint:{"center_x":0.5,"center_y":0.65}
+	
+	Label:
+		text:"şirket ismi"
+		pos_hint:{"center_x":0.5,"center_y":0.45}
+		color:1,1,1
+		font_size:"30px"
+		font_name: pen_1.font_type
+	Label:
+		text:"Tarim 4.0"
+		pos_hint:{"center_x":0.5,"center_y":0.40}
+		color:1,1,1
+		font_size:"20px"
+		font_name: pen_1.font_type
+
+<pencere3>:
+	canvas:
+		Color:
+			rgba:self.bg_color
+		Rectangle:
+			pos:self.pos
+			size:self.size
+	
+	id:pen_3
+	font_type:'fonts/Pacifico-Regular.ttf'
+	
+	Label:
+		text:"Manuel Sürüş mü, otonom mu ?"
+		pos_hint:{"center_x":0.5,"center_y":0.70}
+		color:1,1,1
+		font_size:"25px"
+		font_name: pen_3.font_type
+		halign: 'center'
+		valign: 'middle'
+	
+	Button:
+		text:"Manuel"
+		pos_hint:{"center_x":0.7,"center_y":0.5}
+		color:0,0,0
+		size_hint:0.3,0.1
+		on_press:app.secim_yap_manuel("manuel")
+		background_normal:''
+		background_color:(0,0,0,0)
+		canvas.before:
+			Color:
+				rgba:(1,1,1,1)
+			
+			RoundedRectangle:
+				size:self.size
+				pos:self.pos
+				radius:[(20, 20), (20, 20), (20, 20), (20, 20)]
+	Button:
+		text:"Otonom"
+		pos_hint:{"center_x":0.3,"center_y":0.5}
+		color:0,0,0
+		size_hint:0.3,0.1	
+		on_press:app.secim_yap_manuel("otonom")
+		background_normal:''
+		background_color:(0,0,0,0)
+		canvas.before:
+			Color:
+				rgba:(1,1,1,1)
+			
+			RoundedRectangle:
+				size:self.size
+				pos:self.pos
+				radius:[(20, 20), (20, 20), (20, 20), (20, 20)]
+	
+	Image:
+		source:"img/logo.png"
+		allow_stretch: True
+		size_hint:0.45,0.45
+		pos_hint:{"center_x":0.5,"center_y":0.13}
+
+
+<pencereotonom>:
+	canvas:
+		Color:
+			rgba:self.bg_color
+		Rectangle:
+			pos:self.pos
+			size:self.size
+
+	Image:
+		source:"img/logo.png"
+		allow_stretch: True
+		size_hint:0.8,0.8
+		pos_hint:{"center_x":0.5,"center_y":0.65}
+	
+	Label:
+		text:"Otonom sürüş yapılıyor"
+		pos_hint:{"center_x":0.5,"center_y":0.40}
+		color:1,1,1
+		font_size:"30px"
+
+	Button:
+		text:"iptal"
+		pos_hint:{"center_x":0.5,"center_y":0.25}
+		color:1,1,1
+		size_hint:0.3,0.1	
+		background_color:1,0,0,1
+		on_press:app.otonom_iptal()
+
+<Popups@Popup>:
+	title:"Robotun ip adresini giriniz"
+	#size_hint:(0.5,0.9)
+	#size:200,200
+	
+	#RelativeLayout:
+	TextInput:
+		id:ip_text
+		hint_text:'Robotun ip adresini giriniz'
+		size_hint:1,0.25
+		pos_hint:{"x":0,"y":0.3}
+		on_text:app.ip_adres_kontrol()
+			
+	Label:
+		id:label_deneme
+		text:"Henüz bir değer girilmedi"
+		size_hint:1,0.15
+		pos_hint:{"x":0,"y":0.7}
+
+<pencere4>:
+	canvas:
+		Color:
+			rgb:self.bg_color
+		Rectangle:
+			pos:self.pos
+			size:self.size		
+	
+	btn: button_2
+	
+	
+	y_merkez:0.3
+	x_merkez:0.5
+	
+	btn_size:0.3,0.13
+	
+	Image:
+		id:kamera
+        source: 'img/yaz.jpg'
+		pos_hint:{"center_x":0.5,"center_y":0.85}
+		size_hint:(0.6,0.6)
+	
+	Button:
+		text:""
+		pos_hint:{"center_x":root.x_merkez,"center_y":root.y_merkez-.15}
+		color:0,0,0
+		size_hint:root.btn_size
+		background_normal:"img/assagi_a.png"
+		background_down:"img/assagi_b.png"
+		on_press:app.geri_git()
+	Button:
+		id:button_2
+		text:""
+		pos_hint:{"center_x":root.x_merkez,"center_y":root.y_merkez+.15}
+		color:0,0,0
+		size_hint:root.btn_size
+		background_normal:"img/yukari_a.png"
+		background_down:"img/yukari_b.png"
+		on_press:app.ileri_git()
+		
+	Button:
+		pos_hint:{"center_x":root.x_merkez-.2,"center_y":root.y_merkez}
+		color:0,0,0
+		size_hint:root.btn_size
+		background_normal:"img/sola_a.png"
+		background_down:"img/sola_b.png"
+		on_press:app.sola_git()
+		
+	Button:
+		text:""
+		pos_hint:{"center_x":root.x_merkez+.2,"center_y":root.y_merkez}
+		color:0,0,0
+		size_hint:root.btn_size
+		background_normal:"img/saga_a.png"
+		background_down:"img/saga_b.png"
+		on_press:app.saga_git()
+		
+	Button:
+		bold:True
+		pos_hint:{"center_x":0.3,"center_y":0.65}
+		color:1,1,1
+		size_hint:root.btn_size
+		background_normal:"img/capala_a.png"
+		background_down:"img/capala_b.png"
+		on_press:app.capala()
+		
+	Button:
+		bold:True
+		pos_hint:{"center_x":0.7,"center_y":0.65}
+		color:1,1,1
+		size_hint:root.btn_size
+		background_normal:"img/durdur_a.png"
+		background_down:"img/durdur_b.png"
+		on_press:app.durdur()
+	
+	
+
+<Anaui>:
+	canvas:
+		Color:
+			rgb:0.8,0.8,0.8
+		Rectangle:
+			pos:self.pos
+			size:self.size
+
+
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
