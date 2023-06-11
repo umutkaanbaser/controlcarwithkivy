@@ -35,12 +35,15 @@ then you will be asked this question and one of the following 2 pages will open 
  pip3 install flask # ==2.1.2
  pip3 install opencv-python  #==4.6.0
  
- # kivy kurulum : https://kivy.org/doc/stable-1.10.1/installation/installation-windows.html
+ # kivy kurulum | installation kivy : https://kivy.org/doc/stable-1.10.1/installation/installation-windows.html
  python -m pip install --upgrade pip wheel setuptools
  python -m pip install docutils pygments pypiwin32 kivy.deps.sdl2 kivy.deps.glew
  python -m pip install kivy.deps.gstreamer
  python -m pip install kivy.deps.angle
  python -m pip install kivy
  ```
- 
+ # koşturmak | run 
+ ```
+ python main.py # apk yada exe haline getirilebilir, you can make apk or exe
+ ```
  
